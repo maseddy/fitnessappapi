@@ -49,6 +49,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add IHttpContextAccessor and UserManagementService
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<UserManagementService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
